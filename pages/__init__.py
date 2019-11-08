@@ -1,0 +1,1 @@
+# app을 만들었을 경우 앱의 이름을 project folder > settings.py > INSTALLED_APPS에 넣어야 합니다.

@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+  <h3>loop</h3>
+
+  {% for menu in menus %}
+    <li>{{menu}}</li>
+  {% endfor %}
+
+  {% for menu in menus %}
+  <p>{{forloop.counter}} : {{menu}}</p>
+  {% endfor %}
+
+  <!-- empty uses similaly for ~ else in python  -->
+  {% for e in empty %}
+    <p>{{e}}</p>
+  {% empty %}
+    <p>empty list.</p>
+  {% endfor %}
+
+  <h3>if</h3>
+
+  {% if 'korean' in menus %}
+    <p>korean loves korean</p>
+  {% endif %}
+
+  {% for menu in menus %}
+
+    <p>{{forloop.counter}}th loop now</p>
+
+    {% if 'korean' == menu %}
+      <p>korean loves korean</p>
+    {% elif 'jap' == menu %}
+      <p>?????</p>
+    {% else %}
+      <p>korean likes {{menu}}</p>
+    {% endif %}
+
+  {% endfor %}
+
+{% endblock %}
