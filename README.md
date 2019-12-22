@@ -1,6 +1,6 @@
 # README
 
-## Start django project with CLI
+## Start django with CLI
 
 ```bash
 renynim@renynim MINGW64 ~/django-intro
