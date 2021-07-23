@@ -1,4 +1,4 @@
-"""django_intro URL Configuration
+'''django_intro URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/2.2/topics/http/urls/
@@ -12,28 +12,24 @@ Class-based views
 Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
+'''
+
 from django.contrib import admin
 from django.urls import path
 
-# import views.py from made app
 from pages import views
 
-# add urls in urlpatterns for request target url when inputted data
 urlpatterns = [
     path('admin/', admin.site.urls),
 
-    # request run with path('url name', function name)
     path('index/', views.index),
     path('dinner/', views.dinner),
     path('image/', views.image),
 
-    # if some variables needed, do variable routing with <>
     path('greeting/<str:name>/', views.greeting),
     path('cube/<int:num>/', views.cube),
     path('mul/<int:num1>/<int:num2>/', views.mul),
 
-    # for make project comfortable use basic.html
     path('dtl/', views.dtl),
     path('christmas/', views.christmas)
 ]
