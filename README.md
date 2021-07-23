@@ -1,4 +1,6 @@
-# README
+# introduction
+
+## Start django project
 
 ```bash
 $ django-admin startproject project .
