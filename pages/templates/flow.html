@@ -2,15 +2,15 @@
 
 {% block body %}
   <h3>Loop</h3>
-  {% for menu in menus %}
-    <li>{{menu}}</li>
+  {% for m in menu %}
+    <li>{{m}}</li>
   {% endfor %}
 
   <hr>
 
   <h3>Loop with index</h3>
-  {% for menu in menus %}
-    <li>{{forloop.counter}}: {{menu}}</li>
+  {% for m in menu %}
+    <li>{{forloop.counter}}: {{m}}</li>
   {% endfor %}
 
   <hr>
@@ -25,18 +25,18 @@
   <hr>
 
   <h3>Control of flow</h3>
-  {% if 'korean' in menus %}
+  {% if 'korean' in menu %}
     <p>Korean loves korean.</p>
   {% endif %}
 
-  {% for menu in menus %}
+  {% for m in menu %}
     <p>{{forloop.counter}}th loop now</p>
-    {% if 'korean' == menu %}
+    {% if 'korean' == m %}
       <p>Korean loves korean.</p>
-    {% elif 'jap' == menu %}
-      <p>Korean loves jap.</p>
+    {% elif 'chinese' == m %}
+      <p>Korean hates chinese.</p>
     {% else %}
-      <p>Korean likes {{menu}}.</p>
+      <p>Korean likes {{m}}.</p>
     {% endif %}
   {% endfor %}
 {% endblock %}

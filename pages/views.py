@@ -28,24 +28,14 @@ def cube(request, num):
     return render(request, 'cube.html', context)
 
 
-def mul(request, num1, num2):
-    context = {'mul': num1 * num2, 'num1': num1, 'num2': num2, }
-    return render(request, 'mul.html', context)
+def multiple(request, num1, num2):
+    context = {'multiple': num1 * num2, 'num1': num1, 'num2': num2, }
+    return render(request, 'multiple.html', context)
 
 
-def dtl(request):
-    menus = ['korean', 'western', 'chinese', 'jap']
-    sentences = 'Life is short, you need python'
-    messages = {'apple': 'red', 'banana': 'yellow', 'cat': 'cute', }
-    now = datetime.datetime.now()
-    empty = []
-
-    context = {
-        'menus': menus, 'sentences': sentences,
-        'messages': messages, 'now': now, 'empty': empty,
-    }
-
-    return render(request, 'dtl.html', context)
+def flow(request):
+    context = {'menu': ['korean', 'western', 'chinese'], 'empty': [], }
+    return render(request, 'flow.html', context)
 
 
 def christmas(request):

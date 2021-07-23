@@ -28,8 +28,8 @@ urlpatterns = [
 
     path('greeting/<str:name>/', views.greeting),
     path('cube/<int:num>/', views.cube),
-    path('mul/<int:num1>/<int:num2>/', views.mul),
+    path('multiple/<int:num1>/<int:num2>/', views.multiple),
 
-    path('dtl/', views.dtl),
+    path('flow/', views.flow),
     path('christmas/', views.christmas)
 ]
