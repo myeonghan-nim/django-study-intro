@@ -40,5 +40,7 @@ def flow(request):
 
 def christmas(request):
     now = datetime.datetime.now()
-    context = {'result': True if now.month == 12 and now.day == 25 else False}
+    context = {
+        'result': True if now.month == 12 and now.day == 25 else False,
+    }
     return render(request, 'christmas.html', context)
