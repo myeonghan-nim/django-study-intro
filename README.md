@@ -1,9 +1,8 @@
 # Study: django
 
-## start django
+## start
 
 ```bash
-$ django-admin startproject project .
-
-$ django-admin startapp app
+django-admin startproject project .
+django-admin startapp app
 ```
