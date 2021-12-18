@@ -1,6 +1,6 @@
-# introduction
+# Study: django
 
-## Start django project
+## start django
 
 ```bash
 $ django-admin startproject project .
